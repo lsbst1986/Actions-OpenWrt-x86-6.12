@@ -6,7 +6,7 @@ CONFIG_GRUB_IMAGES=y
 # CONFIG_LIBCURL_NGHTTP2 is not set
 CONFIG_PACKAGE_6in4=y
 # CONFIG_PACKAGE_amdgpu-firmware is not set
-CONFIG_PACKAGE_adguardhome=y
+# CONFIG_PACKAGE_adguardhome is not set
 CONFIG_PACKAGE_bash=y
 CONFIG_PACKAGE_boost=y
 CONFIG_PACKAGE_boost-program_options=y
