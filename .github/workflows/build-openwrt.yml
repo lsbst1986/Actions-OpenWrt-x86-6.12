@@ -108,7 +108,7 @@ jobs:
     - name: luci-app-adguardhome
       run: |
         cd openwrt/package 
-        git clone https://github.com/rufengsuixing/luci-app-adguardhome
+        git clone https://github.com/rufengsuixing/luci-app-adguardhome.git
     
     - name: Load custom feeds
       run: |
@@ -118,10 +118,10 @@ jobs:
         $GITHUB_WORKSPACE/$DIY_P1_SH
         
    
-    - name: lenyu
-      run: |
-        cd openwrt 
-        bash  lenyu.sh
+    #- name: lenyu
+      #run: |
+        #cd openwrt 
+        #bash  lenyu.sh
 
 
     - name: Update feeds
@@ -177,10 +177,10 @@ jobs:
         name: OpenWrt_bin${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
         path: openwrt/bin
    
-    - name: delete files
-      run: |
-        cd openwrt 
-        bash  rename.sh
+    #- name: delete files
+      #run: |
+        #cd openwrt 
+        #bash  rename.sh
     
 
     - name: Organize files
@@ -247,11 +247,11 @@ jobs:
         body_path: release.txt
         files: ${{ env.FIRMWARE }}/*
 
-    - name: Delete workflow runs
-      uses: Lenyu2020/delete-workflow-runs@main
-      with:
-        retain_days: 1
-        keep_minimum_runs: 5
+    #- name: Delete workflow runs
+      #uses: lsbst1986/delete-workflow-runs@main
+      #with:
+        #retain_days: 1
+        #keep_minimum_runs: 5
 
     - name: Remove old Releases
       uses: dev-drprasad/delete-older-releases@v0.2.1
