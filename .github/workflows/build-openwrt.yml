@@ -95,10 +95,10 @@ jobs:
         cd openwrt/package 		
         git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git luci-theme-argonn
         
-    - name: aliyundrive-webdav
-      run: |
-        cd openwrt/package 
-        git clone https://github.com/messense/aliyundrive-webdav.git
+    #- name: aliyundrive-webdav
+      #run: |
+        #cd openwrt/package 
+        #git clone https://github.com/messense/aliyundrive-webdav.git
        
     - name: luci-app-frpc
       run: |
@@ -108,7 +108,7 @@ jobs:
     - name: luci-app-adguardhome
       run: |
         cd openwrt/package 
-        git clone https://github.com/rufengsuixing/luci-app-adguardhome.git
+        git clone https://github.com/lsbst1986/luci-app-adguardhome.git
     
     - name: Load custom feeds
       run: |
