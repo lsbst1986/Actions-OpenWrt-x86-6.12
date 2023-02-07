@@ -177,11 +177,10 @@ jobs:
         name: OpenWrt_bin${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
         path: openwrt/bin
    
-    - name: delete files
+    - name: Delete files
       run: |
         cd openwrt 
         bash  delete.sh
-    
 
     - name: Organize files
       id: organize
