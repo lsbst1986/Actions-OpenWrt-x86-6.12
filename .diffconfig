@@ -15,9 +15,9 @@ CONFIG_PACKAGE_coreutils-nohup=y
 # CONFIG_PACKAGE_dnsmasq_full_dhcpv6 is not set
 CONFIG_PACKAGE_haproxy=y
 CONFIG_PACKAGE_hysteria=y
-CONFIG_PACKAGE_ip6tables=y
-CONFIG_PACKAGE_ip6tables-extra=y
-CONFIG_PACKAGE_ip6tables-mod-nat=y
+#CONFIG_PACKAGE_ip6tables=y
+#CONFIG_PACKAGE_ip6tables-extra=y
+#CONFIG_PACKAGE_ip6tables-mod-nat=y
 CONFIG_PACKAGE_ipt2socks=y
 CONFIG_PACKAGE_iptables-mod-conntrack-extra=y
 CONFIG_PACKAGE_iptables-mod-iprange=y
@@ -26,8 +26,8 @@ CONFIG_PACKAGE_ipv6helper=y
 # CONFIG_PACKAGE_kmod-drm-amdgpu is not set
 # CONFIG_PACKAGE_kmod-i915-gvt=y
 CONFIG_PACKAGE_kmod-inet-diag=y
-CONFIG_PACKAGE_kmod-ip6tables=y
-CONFIG_PACKAGE_kmod-ip6tables-extra=y
+#CONFIG_PACKAGE_kmod-ip6tables=y
+#CONFIG_PACKAGE_kmod-ip6tables-extra=y
 CONFIG_PACKAGE_kmod-ipt-conntrack-extra=y
 CONFIG_PACKAGE_kmod-ipt-iprange=y
 CONFIG_PACKAGE_kmod-ipt-nat6=y
