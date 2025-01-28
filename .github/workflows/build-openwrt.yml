@@ -45,29 +45,21 @@ jobs:
 
     steps:
 
-    - name: Free Disk Space (Ubuntu)
-      uses: jlumbroso/free-disk-space@main
-      with:
-        # this might remove tools that are actually needed,
-        # if set to "true" but frees about 6 GB
-        tool-cache: true
+    #- name: Free Disk Space (Ubuntu)
+    #  uses: jlumbroso/free-disk-space@main
+    #  with:
+    #    # this might remove tools that are actually needed,
+    #    # if set to "true" but frees about 6 GB
+    #    tool-cache: true
 
         # all of these default to true, but feel free to set to
         # "false" if necessary for your workflow
-        android: true
-        dotnet: true
-        haskell: true
-        large-packages: true
-        swap-storage: true
-    
-    - name: Checkout
-      uses: actions/checkout@main
+    #    android: true
+    #    dotnet: true
+    #    haskell: true
+    #    large-packages: true
+    #    swap-storage: true
 
-    - name: Disk space
-      run: |
-           echo "Free space:"
-           df -h
-           
     - name: Initialization environment
       env:
         DEBIAN_FRONTEND: noninteractive
@@ -81,6 +73,21 @@ jobs:
         sudo -E apt-get -y autoremove --purge
         sudo -E apt-get -y clean
         sudo timedatectl set-timezone "$TZ"
+
+    - name: Combine Disks
+      uses: easimon/maximize-build-space@master
+      with:
+        swap-size-mb: 1024
+        temp-reserve-mb: 100
+        root-reserve-mb: 1024
+        
+    - name: Checkout
+      uses: actions/checkout@main
+
+    #- name: Disk space
+    #  run: |
+    #       echo "Free space:"
+    #       df -h
           
     - name: Clone source code
       working-directory: /workdir
